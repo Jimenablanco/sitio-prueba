@@ -1,10 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=PT+Serif:wght@400;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=PT+Serif:wght@400;700&display=swap');
 
 /* Tipografia
 font-family: 'Barlow Condensed', sans-serif;
@@ -51,7 +52,7 @@ a:link, a:visited, a:active{
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: absolute;
+    /*position: absolute;*/
 }
 
 .section-1 h1{
@@ -75,4 +76,75 @@ a:link, a:visited, a:active{
     text-decoration: none;
     margin-top: .9375rem;
     cursor: pointer;
+}
+
+.section-2{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "img-1 img-1 img-3"
+    "img-1 img-1 img-3"
+    "img-2 img-2 img-3"
+    "img-2 img-2 .";
+    justify-content: center;
+    gap: 1.875rem;
+}
+
+.img-1{
+    grid-area: img-1;
+}
+
+.img-1 img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.img-2{
+    grid-area: img-2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.img-2 img{
+    width: 30%;
+    height: 25%;
+    object-fit: cover;
+}
+
+.img-3{
+    grid-area: img-3;
+}
+
+.img-3 img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.section-3{
+    width: 100%;
+    height: 31.25rem;
+    background-image: url(../assets/fondoSection.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .625rem;
+}
+
+.card-servicio img{
+    width: 60%;
 }
